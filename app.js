@@ -33,6 +33,7 @@ function render(data) {
 
         const pStatus = document.createElement("p")
         pStatus.classList.add("card_status")
+        pStatus.classList.add("card_status_" + item.status)
         pStatus.textContent = item.status
 
         const pSpecies = document.createElement("p")
@@ -52,6 +53,9 @@ function render(data) {
         pLocation.textContent = item.location.name
         pLocation.setAttribute("href", item.location.url);
         pLocation.setAttribute("target", "_blank");
+        // pLocation.setAttribute("href", "/cardInBox.html");
+
+
 
         list.append(card)
         card.append(cardBox)
@@ -65,12 +69,15 @@ function render(data) {
 
 }
 
-function getAlldata() {
-    fetch(BASE_URL)
-        .then(response => response.json())
-        .then(data => { render(data.results); });
-}
 
-getAlldata();
+function getAllData() {
+
+    fetch(BASE_URL)
+        .then(res => res.json())
+        .then(data => render(data.results))
+}
+getAllData()
+
+
 
 

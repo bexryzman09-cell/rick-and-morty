@@ -96,7 +96,7 @@ body {
 }
 
 .hero__title {
-    font-size: 7.625rem;
+    font-size: 110px;
     font-weight: 900;
     z-index: 1;
     font-weight: 700;
@@ -207,14 +207,21 @@ footer {
 
 }
 
+.footer__box-list {
+    display: flex;
+    justify-content: center;
 
+}
 
 .footer__list {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     list-style: none;
+    max-width: 500px;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 
@@ -344,7 +351,7 @@ footer {
 
 .support__subtitle {
     font-size: 18px;
-    color: rgb(51, 51, 51);
+    color: #333333;
 }
 
 .support__text {
@@ -360,8 +367,8 @@ footer {
 
 
 
-
-
+/* 
+list and card */
 
 
 
@@ -443,7 +450,11 @@ footer {
     background: #999;
 }
 
-.card_status::before {
+.card_status_Dead::before {
+    background: #ff0000;
+}
+
+.card_status_Alive::before {
     background: #55cc44;
 }
 
@@ -478,3 +489,7 @@ footer {
     font-size: 18px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+/* 
+card in box */
+
